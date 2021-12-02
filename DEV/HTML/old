@@ -1,0 +1,369 @@
+// app.post('/client/inscription',function (req,res){
+//   var verif = clientInscription(req.body.name,req.body.email,req.body.password)
+
+
+// var sender = {    //reponde du 
+//   code:404,
+//   description:"Compte deja éxistant"
+// }
+
+// var email_client_inscription = req.body.email.toLowerCase()
+// var same = "null"; //variable si dans la base de donnée match avec email
+//    //function vérifiant les différent champ du formulaire ( renvoi un talbeau)
+
+// if (verif.name == 'ok' || verif.email == 'ok' || verif.password == 'ok'){   //verifi si il na pas d'erreur 
+
+//     con.connect(function(err) {   //connexion avec la base de donnée
+//       con.query("SELECT * FROM `client`;",function (err, result, fields) {    //query avec la base de donnée
+//       if (result != undefined){   //si la base de donnée renvoi un undefined , revoi une error dans la console 
+//          for (var i = 0 ; i < result.length ;i++){    //boucle pour vérifier si l'addresse mail du champ match avec les addresse mail stocker dans la BDD en lower case
+//           if (result[i].email == email_client_inscription){      // si non match --> inscription sinon --> revoyer un match donc une non inscription
+//             same = "entreprise";
+//           }
+//         }
+//           if (same == "entreprise"){
+//           }else{
+//             logger.warning(req.body.email.toLowerCase(),"ne c'est pas inscrit car sont compte éxiste deja dans la base de donnée")
+//             res.send("")
+//           }
+//        }else{
+//         logger.error(req.body.email.toLowerCase(),"Erreur base de donnée")
+//        }}
+//        )
+//        con.query("SELECT * FROM `client`;",function (err, result, fields) {
+//        })
+//     })
+//   })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function clientInscription(NAME,EMAIL,PASSWORD){
+
+//     var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; //le paterne de l'email.
+//     var error = {       //(null) : champ non rempli | (error) : erreur lors de la vérification du string | (ok) : string valide 
+//       name : "ok",
+//       email : "ok",
+//       password : "ok"
+//     };
+  
+    
+//     if(NAME == null || NAME == "")
+//     {
+//         error.name = "null";
+//     }
+//      switch (NAME) {
+  
+//       case null:
+//          error.name = "null";
+//          break;
+//        case '':
+//          error.name = "null";
+//         break;
+  
+//      };
+//     switch (EMAIL) {
+//       case null:
+//         error.email = "null";
+//         break;
+  
+//       case "":
+//         error.email = "null";
+//       break;
+  
+//       case (!EMAIL.match(pattern)):
+//        text = "Adress Invalid";
+//       breack;
+//      };
+  
+//     switch (PASSWORD) {
+//       case null:
+//         error.password = "null";
+//         break;
+  
+//       case "":
+//         error.password = "null";
+//       break;
+//     };
+  
+//     return error;
+//   }
+
+
+// module.exports = function(app, con, bcrypt, salt, logger) {
+///////VARIABLE POUR CONNECTION BDD///////  
+
+
+
+ 
+
+   
+
+    //   __   __             ___        __         /  __          ___      ___ 
+    //  /  ` /  \ |\ | |\ | |__  \_/ | /  \ |\ |  /  /  ` |    | |__  |\ |  |  
+    //  \__, \__/ | \| | \| |___ / \ | \__/ | \| /   \__, |___ | |___ | \|  |  
+                                                                            
+// app.post ('/client/connexion',function (req,res){
+
+//   var sender = {    //reponde du 
+//     BDD_check :"ok",
+//     verify : verif,
+//     match : "null"
+//   }
+//   var email_client_connexion = req.body.email.toLowerCase()
+
+//    con.connect(function(err) {
+
+//     con.query("SELECT * FROM `client`;",function (err, result, fields) {
+//       for (var i = 0; i < result.length; i++){
+//       if (result != undefined){
+//         same = true;
+//       }else{
+//         logger.error(req.body.email.toLowerCase(),"Erreur base de donnée")
+//       }
+//     }
+//     })
+//     same =false;
+//     con.query("SELECT * FROM `entreprise`;",function (err, result, fields) {
+
+//       if (result != undefined){
+        
+//         for (var i = 0; i < result.length; i++){
+//           if (result[i].email == email_client_connexion){      // si non match --> inscription sinon --> revoyer un match donc une non inscription
+//             same = true;
+//           }
+//         }
+//         if (same == true){
+//           logger.info(`${email_client_connexion} vien de ce connecter et recoi le tocken`)
+//         }else{
+//           logger.warning(`${email_client_connexion} na pas pu ce connecter car in ne possède pas de compte`)
+//         }
+//     }else{
+//       logger.error(req.body.email.toLowerCase(),"Erreur base de donnée")
+//     }
+//     })
+//    })
+// })
+
+
+
+
+//post verif(name,email,password,"","client")
+
+
+// ▂ ▃ ▄ ▅ ▆ ▇ █ POST ENTREPRISE/inscription █ ▇ ▆ ▅ ▄ ▃ ▂
+// app.post('/entreprise/inscription',function (req,res){
+
+
+//   var email_entreprise_inscription = req.body.email.toLowerCase()
+//   var verif = entrepriseInscription(req.body.name,req.body.location,req.body.email,req.body.password)
+  
+//   if (verif.name == 'ok' || verif.location == 'ok' || verif.email == 'ok' || verif.password == 'ok'){
+  
+//   var same = false;
+//       con.connect(function(err) {
+//         con.query("SELECT * FROM `entreprise`;",function (err, result, fields) {
+  
+//         if (result != undefined){
+//            for (var i = 0 ; i < result.length ;i++){
+  
+            
+//             if (result[i].email == email_entreprise_inscription){
+//               same = true;
+//             }
+  
+//           }
+//             if (same == false)
+//             {
+//               con.query(`INSERT INTO entreprise (id_entreprise, name, location, email, password) VALUES (NULL, '${req.body.name}','${req.body.loaction}','${email_entreprise_inscription}', '${bcrypt.hashSync(req.body.password, salt)}');`, function (err, result, fields) {
+//               })
+//               logger.info(req.body.email.toLowerCase()," c'est inscrit !")
+//             }
+//             else
+//             {
+//               logger.warning(req.body.email.toLowerCase(),"ne c'est pas inscrit car sont compte entreprise éxiste deja dans la base de donnée")
+//             }
+//          }
+//          else
+//          {
+//           logger.error(req.body.email.toLowerCase(),"ne c'est pas inscrit car sont compte éxiste deja dans la base de donnée")
+//          }}
+//          )
+//       })
+//     }
+//     else 
+//     {
+//       res.send(verif);
+//     }
+//        })
+  
+
+
+
+
+//////////////////INSCRIPTION CLIENT////////////////
+//////////////////INSCRIPTION CLIENT////////////////
+//////////////////INSCRIPTION CLIENT////////////////
+
+
+
+    //  ░░░░░░░░░░░░░░░░░░░░░▄▀░░▌
+    //  ░░░░░░░░░░░░░░░░░░░▄▀▐░░░▌
+    //  ░░░░░░░░░░░░░░░░▄▀▀▒▐▒░░░▌
+    //  ░░░░░▄▀▀▄░░░▄▄▀▀▒▒▒▒▌▒▒░░▌
+    //  ░░░░▐▒░░░▀▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    //  ░░░░▌▒░░░░▒▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄
+    //  ░░░░▐▒░░░░░▒▒▒▒▒▒▒▒▒▌▒▐▒▒▒▒▒▀▄
+    //  ░░░░▌▀▄░░▒▒▒▒▒▒▒▒▐▒▒▒▌▒▌▒▄▄▒▒▐
+    //  ░░░▌▌▒▒▀▒▒▒▒▒▒▒▒▒▒▐▒▒▒▒▒█▄█▌▒▒▌
+    //  ░▄▀▒▐▒▒▒▒▒▒▒▒▒▒▒▄▀█▌▒▒▒▒▒▀▀▒▒▐░░░▄
+    //  ▀▒▒▒▒▌▒▒▒▒▒▒▒▄▒▐███▌▄▒▒▒▒▒▒▒▄▀▀▀▀
+    //  ▒▒▒▒▒▐▒▒▒▒▒▄▀▒▒▒▀▀▀▒▒▒▒▄█▀░░▒▌▀▀▄▄
+    //  ▒▒▒▒▒▒█▒▄▄▀▒▒▒▒▒▒▒▒▒▒▒░░▐▒▀▄▀▄░░░░▀
+    //  ▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▄▒▒▒▒▄▀▒▒▒▌░░▀▄
+    //  ▒▒▒▒▒▒▒▒▀▄▒▒▒▒▒▒▒▒▀▀▀▀▒▒▒▄▀
+
+  
+
+
+
+
+//////////////////INSCRIPTION ENTREPRISE////////////////
+//////////////////INSCRIPTION ENTREPRISE////////////////
+//////////////////INSCRIPTION ENTREPRISE////////////////
+
+    // function entrepriseInscription(NAME, LOCATION, EMAIL, PASSWORD){
+
+    //   var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; //le paterne de l'email.
+
+    //   var error = {       //(null) : champ non rempli | (error) : erreur lors de la vérification du string | (ok) : string valide 
+    //     name : "ok",
+    //     location : "ok",
+    //     email : "ok",
+    //     password : "ok"
+    //   };
+ 
+ 
+    //   if(NAME == null || NAME == "")
+    //   {
+    //       error.name = "null";
+    //   }
+ 
+    //   if(LOCATION == null || LOCATION == "")
+    //   {
+    //       error.location = "null";
+    //   }
+ 
+    //   if(EMAIL == null || EMAIL == "")
+    //   {
+    //       error.email = "null";
+    //   }
+    //   else if(!EMAIL.match(pattern))
+    //   {
+    //      text = "Adress Invalid";
+    //   }
+    //   // if(entrepriseInscription(req.body.email) == clientInscription(req.body.email))
+    //   // {
+
+    //   //   text = "Email déjà utilisé"
+
+    //   // }
+ 
+    //   if(PASSWORD == null || PASSWORD == "")
+    //   {
+    //       error.password = "null";
+    //   }
+ 
+    //   return (error);
+    //  }
+  
+    // req.body.email(
+    //   `SELECT * FROM 'client' WHERE 'email'= ${req.body.email} AND SELECT * FROM 'entreprise' WHERE 'email' = ${req.body.email}`,
+
+    //   if(email = 'null')
+    //   {
+        
+        
+    //   }
+    // )
+
+
+
+  //   function verif_client_and_entreprise(NAME, EMAIL, PASSWORD, LOCATION, TYPE)
+  //   {
+  //     var error = {
+  //       name : "ok",
+  //       email : "ok",
+  //       password : "ok",
+  //       location : "ok",
+  //       type : "ok"
+  //     }
+      
+  //     if(NAME == null || NAME ==  "")
+  //     {
+  //       error.name = "null";
+  //     }
+
+  //     if(EMAIL == null || EMAIL ==  "")
+  //     {
+  //       error.email = "null";
+  //     }
+
+  //     if(PASSWORD == null || PASSWORD ==  "")
+  //     {
+  //       error.password = "null";
+  //     }
+      
+      
+  //     if(TYPE == "entreprise")
+  //     {
+  //       if(LOCATION == null || LOCATION ==  "")
+  //     {
+  //       error.location = "null";
+  //     }
+
+  //     if(NAME == "ok" && EMAIL == "ok" && PASSWORD == "ok" && TYPE == "ok" && LOCATION == "ok" )
+  //     {
+  //       return "ok";
+  //     }
+  //     }
+  //   }
+  
+  //  }

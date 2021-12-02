@@ -1,0 +1,17 @@
+{
+   "port": 9000,
+
+   "mysql_con": {
+      
+      "host": "localhost",
+  
+      "user": "root",
+    
+      "password": "Bloo1",
+    
+      "database" : "jobboardsql"  
+   },
+
+      "secret": "vZ2eQxpJheBw8xCYlhU4vv3DiqeUjyhr2LMu2fqELZdAeO3R36"
+      
+}

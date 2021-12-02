@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Création Annonce</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+</style>
+<script src=""></script>
+<body>
+
+    <nav class="navbar  navbar-fixed-top">
+        <ul class="menu">
+            <li><a class="menu-link" href="/">Home</a></li>
+            <li><a style="color:#E74C3C" class="menu-link" href="/mail">Send mail to galaxial51@gmail.com (don't abuse pls)</a></li>
+            <li><a class="menu-link" href="/user">GET ALL USER</a></li>
+            <li><a class="menu-link" href="/entreprise">GET ALL ENTREPRISE</a></li>
+            <li><a class="menu-link" href="/inscription">inscription</a></li>
+            <li><a class="menu-link" href="/inscriptionEntreprise">Inscription Entreprise</a></li>
+            <li><a class="menu-link" href="/creationAnnonce">Création d'une annonce</a></li>
+            <li><a class="menu-link" href="/Connexion">Connexion</a></li>
+            <li><a class="menu-link" href="/ModifyClient">modifier un client</a></li>
+            <li><a class="menu-link" href="/kill">TUEUR >:^)</a></li>
+            <li><a class="menu-link" href="/deleteClient">delete Client</a></li>
+        </ul>
+    </nav>
+
+    <div>
+
+        <form action="/adds/create" method="post">
+            <div>
+                <label for="description">Description :</label>
+                <input type="text" id="description" name="description">
+            </div>
+            <div>
+                <label for="content">Contenu :</label>
+                <input type="text" id="content" name="content">
+            </div>
+            <div>
+                <label for="title">Titre :</label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div>
+                <label for="contrat_type">Type de contrat :</label>
+                <input id="text" name="contrat_type" type="contrat_type"></input>
+            </div>
+            <div>
+                <label for="contrat_time_beg">Début du contrat :</label>
+                <input id="contrat_time_beg" name="contrat_time_beg" type="date"></input>
+            </div>
+            <div>
+                <label for="contrat_time_end">Fin du contrat :</label>
+                <input id="contrat_time_end" name="contrat_time_end" type="date"></input>
+            </div>
+            <div>
+                <input type="submit" value="Envoyer le formulaire">
+            </div>
+        </form>
+
+
+    </div>
+
+</body>
+</html>

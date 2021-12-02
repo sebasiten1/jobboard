@@ -1,0 +1,39 @@
+{
+    "name": "t-web-501-mlh-5-1-jobboard-nicolas.kiffer",
+    "version": "1.0.0",
+    "description": "",
+    "main": "serveur.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server.js -L",
+        "watch": "npm-watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com-msc:EpitechMscProPromo2024/T-WEB-501-MLH-5-1-jobboard-nicolas.kiffer.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@ptkdev/logger": "^1.8.0",
+        "bcrypt": "^5.0.1",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "cookie-parser": "^1.4.5",
+        "cookie-session": "^1.4.0",
+        "cors": "^2.8.5",
+        "crypto": "^1.0.1",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-handlebars": "^5.3.4",
+        "firebase": "^9.1.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.0.9",
+        "mysql": "^2.18.1",
+        "node-schedule": "^2.0.0",
+        "nodemailer": "^6.7.0",
+        "nodemon": "^2.0.13",
+        "npm-watch": "^0.11.0",
+        "socket.io": "^4.2.0"
+    }
+}
